@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Flower</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Feather Icons -->
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!-- My style -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- kita awali dengan buat navbar (bagian paling atas dari web kita untuk menyimpan link dan website logo kita) -->
+ <!-- Navbar start -->
+ <!-- Navbar start -->  
+<!-- cara buat duplikat dan langsung di paste= alt shift pgdn
+cara buat geser kode sebanyak satu baris= alt pgdn
+-->
+
+<nav class="navbar">
+<a href="#" class="navbar-logo">Super <span>Flower</span></a>
+<!-- nav= tag html5.
+   supaya kata senjanya nanti beda warna, maka dikasih span. 
+tutupnya disimpan di luar. nanti warna supernya putih. flowernya warna primary -->
+<!-- kenapa h ref dikasih tanda pagar aja? -->
+<!-- (-) strip dibaca dash -->
+
+<!-- selanjutnya kita punya kumpulan elemen yang namanya nav 
+untuk isi dari navigasi. jadi saya tulisnya navbar dash nav-->
+<!-- lalu kita buat saja 4 buah tag a (pake shortcut= a*4 pencet tab)..? -->
+<div class="navbar-nav">
+    <a href="#home">Beranda</a>
+    <a href="#bunga">Bunga</a>
+    <a href="#about">Tentang Kami</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Kontak</a>
+   
+<!-- ini bisa bikin otomatis 1 baris. caranya= a*4 lalu tab -->
+</div>
+<!-- selanjutnya kita punya tombol2 pendukung. saya mau kasih namanya . ini untuk bikin div lagsung ya. yaitu navbar extra ... -->
+
+<div class="navbar-extra">
+   <a href="#" id="search"><i data-feather="search"></i></a>
+   <a href="#" id="shoppping-cart"><i data-feather="shopping-cart"></i></a>
+   <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+<!-- kita kasih # saja karna nanti tdidak mengarah kemana mana -->
+<!-- <i data-feather="circle"></i> itu di ambil dari web feather icon. kita copas itu ke sini. terus diganti dengan seacrh. karna kita ingin pake icon search -->
+<!-- duplikat= alt shift pgdn -->
+
+</div>
+
+
+<!-- Search form Start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+<!-- Search form Ends -->
+
+</nav>
+
+ <!-- Navbar end -->
+
+ <!-- Hero Section Start-->
+ <section class="hero" id="beranda">
+  <main class="content">
+     <h1>Temani harimu dengan <br><em>Super</em> <span> <em>Flower</em></span></h1>
+<br>
+<p> Kami menyediakan bunga berkualitas <br>untuk melengkapi hari berhargamu</p>
+<a href="#" class="cta">Beli Sekarang</a>
+  </main>
+</section>
+<!-- Hero Section End-->
+
+   <!-- <div class="content">
+      <h3>Kenapa memilih bunga kami?</h3>
+     <h4> Pengalaman Lebih dari 5 Tahun</h4>  
+     <p>Dengan pengalaman yang mendalam dalam industri ini, Super Flower telah menjadi bagian dari banyak momen-momen bersejarah. Kami tahu bagaimana menciptakan karangan bunga yang tidak hanya indah tetapi juga menyampaikan pesan dengan sempurna.</p> 
+      <h4>Kualitas Bunga yang Terjaga</h4>      
+     <p>Kami hanya menggunakan bunga segar terbaik dalam setiap karangan dan bucket bunga kami. Dengan perhatian yang cermat terhadap pemilihan dan perawatan bunga, kami menjamin bahwa setiap karangan tetap indah dan segar saat tiba di tempat Anda.</p> 
+      <h4>Bergaransi</h4>
+     <p>Kepuasan Anda adalah prioritas kami. Kami memberikan jaminan bahwa setiap karangan bunga yang Anda pesan akan tiba dalam kondisi sempurna. Jika terjadi kesalahan minor atau kerusakan, kami siap untuk memperbaikinya dengan cepat dan efisien.</p> 
+   <h4>Pengiriman Gratis di Area Subang</h4>
+      <p>Kami ingin memberikan kemudahan bagi Anda. Layanan pengiriman kami GRATIS di area Bandung, memberi Anda kelegaan lebih lanjut dalam mempersiapkan momen spesial.</p> 
+      <h4>Harga Terjangkau</h4>
+      <p>Kami percaya bahwa setiap orang layak mendapatkan keindahan bunga tanpa harus khawatir tentang anggaran. Kami menawarkan harga yang terjangkau tanpa mengurangi nilai estetika dan kesegaran bunga yang kami tawarkan.</p>
+      <h4>Desain Kreatif dan Custom</h4>
+      <p>Kami menghargai setiap momen unik dalam hidup Anda. Tim kreatif kami berdedikasi untuk merancang karangan bunga yang mencerminkan perasaan, tema acara, dan karakter penerima. Setiap karangan adalah karya seni yang eksklusif untuk Anda.</p>
+   </div> -->
+
+
+<!-- Bunga Section Start -->
+<section class="bunga" id="bunga">
+  <h2><span>Kategori</span> Bunga</h2>
+  <div class="row">
+      <div class="box">
+          <img src="img/buket1.jpg" alt="Buket">
+          <div class="box-content">
+              <h3>Aneka Buket</h3>
+              <a href="buket.html" class="cta">Lihat Selengkapnya</a>
+          </div>
+      </div>
+      <div class="box">
+          <img src="img/wedding1.jpg" alt="Buket Wedding">
+          <div class="box-content">
+              <h3>Bunga Pernikahan</h3>
+              <a href="produk-buket-wedding.html" class="cta">Lihat Selengkapnya</a>
+          </div>
+      </div>
+      <div class="box">
+          <img src="img/ucapan1.jpg" alt="Bunga Papan Ucapan">
+          <div class="box-content">
+              <h3>Papan Ucapan</h3>
+              <a href="produk-bunga-papan.html" class="cta">Lihat Selengkapnya</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+   <h3>Produk Unggulan Kami</h3>
+   
+   <div class="row">
+     <div class="product-card">
+       <div class="product-icons">
+         <a href="#"><i data-feather="shopping-cart"></i></a>
+         <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+       </div>
+       <div class="product-image">
+         <img src="img/unggulan3.jpg" alt="Product 1">
+       </div>
+       <div class="product-content">
+         <h3>Classic Bucket</h3>
+         <div class="product-stars">
+           <i data-feather="star" class="star-full"></i>
+           <i data-feather="star" class="star-full"></i>
+           <i data-feather="star" class="star-full"></i>
+           <i data-feather="star" class="star-full"></i>
+           <i data-feather="star"></i>
+         </div>
+         <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+       </div>
+     </div>
+     <div class="product-card">
+       <div class="product-icons">
+         <a href="#"><i data-feather="shopping-cart"></i></a>
+         <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+       </div>
+       <div class="product-image">
+         <img src="img/unggulan2.jpg" alt="Product 1">
+       </div>
+       <div class="product-content">
+         <h3>Glow Bucket</h3>
+         <div class="product-stars">
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+         </div>
+         <div class="product-price">IDR 150K <span>IDR 200K</span></div>
+       </div>
+     </div>
+     <div class="product-card">
+       <div class="product-icons">
+         <a href="#"><i data-feather="shopping-cart"></i></a>
+         <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+       </div>
+       <div class="product-image">
+         <img src="img//unggulan1.jpg" alt="Product 1">
+       </div>
+       <div class="product-content">
+         <h3>Heart Bucket</h3>
+         <div class="product-stars">
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+           <i data-feather="star"></i>
+         </div>
+         <div class="product-price">IDR 100K <span>IDR 150K</span></div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+<!-- Bunga Section End -->
+<!-- About Section Start -->
+<section class="about" id="about">
+  <h2><span>Tentang</span> Kami</h2>
+  <h3>Kenapa memilih bunga kami?</h3>
+  <div class="row">
+      <container class="box">
+          <container class="box-content">
+              <h4>Pengalaman Lebih dari 5 Tahun</h4>
+              <h5>Dengan pengalaman yang mendalam dalam industri ini, Super Flower telah menjadi bagian dari banyak momen-momen bersejarah. Kami tahu bagaimana menciptakan karangan bunga yang tidak hanya indah tetapi juga menyampaikan pesan dengan sempurna.</h5>
+          </container>
+      </container>
+      <container class="box">
+          <container class="box-content">
+              <h4>Bergaransi</h4>
+              <h5>Kepuasan Anda adalah prioritas kami. Kami memberikan jaminan bahwa setiap karangan bunga yang Anda pesan akan tiba dalam kondisi sempurna. Jika terjadi kesalahan minor atau kerusakan, kami siap untuk memperbaikinya dengan cepat dan efisien.</h5>
+          </container>
+      </container>
+      <container class="box">
+          <container class="box-content">
+              <h4>Kualitas Bunga yang Terjaga</h4>
+              <h5>Kami hanya menggunakan bunga segar terbaik dalam setiap karangan dan bucket bunga kami. Dengan perhatian yang cermat terhadap pemilihan dan perawatan bunga, kami menjamin bahwa setiap karangan tetap indah dan segar saat tiba di tempat Anda.</h5>
+          </container>
+      </container>
+      <container class="box">
+          <container class="box-content">
+              <h4>Desain Kreatif dan Custom</h4>
+              <h5>Kami menghargai setiap momen unik dalam hidup Anda. Tim kreatif kami berdedikasi untuk merancang karangan bunga yang mencerminkan perasaan, tema acara, dan karakter penerima. Setiap karangan adalah karya seni yang eksklusif untuk Anda.</h5>
+          </container>
+      </container>
+  </div>
+</section>
+<!-- About Section End -->
+
+
+<!-- FAQ Section Start -->
+<section class="faq" id="faq">
+   <div class="row">
+      <div class="about-img">
+      <img src="img/baru.jpg" alt="faq">
+   </div>
+
+   <div class="content">
+<h2><span>FAQ</span> (Frequently Asked Question)</h2>
+<h4>Apakah Anda menerima pesanan di luar area Subang?</h2>
+<p>Saat ini, kami hanya melayani pengiriman di area Bandung dan sekitarnya.</p>
+<h4>Bagaimana cara melakukan pemesanan?</h2>    
+<p>Sampaikan kebutuhan anda kepada admin melalui WA, admin akan segera merespon kebutuhan anda</p>   
+<h4>Berapa lama sebelum acara saya harus memesan?</h2>   
+<p>Sebaiknya Anda memesan setidaknya 1 hari sebelum acara. Namun, kami akan berusaha memenuhi permintaan pesanan yang mendesak jika memungkinkan.</p>
+<h4>Apakah ada biaya tambahan untuk pengiriman?</h2>
+<p>Tidak, kami menawarkan layanan pengiriman gratis di area Bandung.</p>
+<h4>Apakah Anda menerima pembayaran secara online?</h2>
+<p>Ya, kami menerima pembayaran melalui transfer bank atau platform pembayaran online yang umum digunakan.</p>
+</section>
+<!-- FAQ Section End -->
+
+
+<!-- Contact Section Start -->
+ <!-- Contact Section start -->
+ <section id="contact" class="contact">
+    <h2><span>Kontak</span> Kami</h2>
+    <p> Jika ada pertanyaan, silakan hubungi kami melalui form ini
+    </p>
+
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9831207581965!2d107.76309707403325!3d-6.7719080662210684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68d8b36918ab13%3A0x5dec2efc59bf9a43!2sGunung%20Canggah!5e0!3m2!1sid!2sid!4v1717842204519!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+ 
+      <form action="">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <input type="text" placeholder="nama">
+        </div>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <input type="text" placeholder="email">
+        </div>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="no hp">
+        </div>
+        <button type="submit" class="btn">kirim pesan</button>
+      </form>
+
+    </div>
+  </section>
+  <!-- Contact Section end -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="socials">
+      <a href="#"><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
+    </div>
+
+    <div class="links">
+      <a href="#Beranda">Beranda</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="credit">
+      <p>Created by <a href="">skilamardotilah</a>. | &copy; 2024.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Modal Box Item Detail start -->
+  <div class="modal" id="item-detail-modal">
+    <div class="modal-container">
+      <a href="#" class="close-icon"><i data-feather="x"></i></a>
+      <div class="modal-content">
+        <img src="img/products/1.jpg" alt="Product 1">
+        <div class="product-content">
+          <h3>Product 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, tenetur cupiditate facilis obcaecati
+            ullam maiores minima quos perspiciatis similique itaque, esse rerum eius repellendus voluptatibus!</p>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
+          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace();
+      </script>
+      
+<script src="js/script.js">
+
+</script>
+   </body>
+</html> 
+

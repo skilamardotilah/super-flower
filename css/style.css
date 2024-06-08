@@ -1,0 +1,1011 @@
+:root {
+    --primary: #f18581; /* SaddleBrown, warna coklat tua */
+    --background: #010101; /* Beige, warna latar belakang */
+    --accent: #110f0e; /* Camel, warna aksen */
+    --text: #ffffff; /* Indigo, warna teks utama */
+    --highlight: #e9e069; /* PeachPuff, warna highlight */
+    --gradient-start: #faf3ce; /* Coral, awal gradien */
+    --gradient-end: #c7bc20; /* Tomato, akhir gradien */
+    --maroon: #8a322f;
+}
+
+* {
+    margin: 0; /* Menghapus margin default dari semua elemen */
+    padding: 0; /* Menghapus padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur box model agar padding dan border termasuk dalam ukuran elemen */
+    outline: none; /* Menghapus outline dari elemen yang dipilih */
+    border: none; /* Menghapus border default dari semua elemen */
+    text-decoration: none; /* Menghapus garis bawah dari semua link */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Mengatur font utama */
+    background-color: var(--background); /* Menggunakan warna latar belakang dari variabel */
+    color: var(--text); /* Mengatur warna teks dari variabel */
+}
+
+.navbar {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Memberi jarak di antara elemen secara merata */
+    align-items: center; /* Mengatur elemen agar sejajar secara vertikal */
+    padding: 1.4rem 7%; /* Memberikan padding atas bawah 1.4rem dan kiri kanan 7% */
+    background-color: var(--accent); /* Warna latar belakang dengan transparansi */
+    border-bottom: 1px solid var(--primary); /* Menambahkan border bawah */
+    position: fixed; /* Mengatur posisi tetap */
+    top: 0; /* Menempel di atas */
+    left: 0; /* Menempel di kiri */
+    right: 0; /* Menempel di kanan */
+    z-index: 9999; /* Mengatur urutan tumpukan agar navbar selalu di atas */
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem; /* Ukuran font logo */
+    font-weight: 750; /* Ketebalan font logo */
+    color: linear-gradient (var(--gradient-start), var(--gradient-end)); /* Gradien warna untuk teks */
+    font-style: italic; /* Mengatur gaya font menjadi miring */
+}
+.navbar .navbar-logo span {
+    color: var(--primary); /* Menggunakan warna utama untuk bagian tertentu dari logo */
+}
+
+.navbar .navbar-nav a {
+    color: #ffffff; /* Warna teks link */
+    display: inline-block; /* Menampilkan elemen sebagai blok sebaris */
+    font-size: 1.4rem; /* Ukuran font link */
+    margin: 0 1rem; /* Margin kiri kanan 1rem */
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary); /* Mengubah warna teks saat link di-hover */
+}
+
+.navbar .navbar-nav a::after {
+    content: ''; /* Menambahkan elemen pseudo kosong */
+    display: block; /* Menampilkan elemen sebagai blok */
+    padding-bottom: 0.5rem; /* Padding bawah 0.5rem */
+    border-bottom: 0.1rem solid var(--primary); /* Border bawah dengan warna utama */
+    transform: scaleX(0); /* Skala horizontal diatur ke 0 */
+    transition: 0.2s linear; /* Transisi linear selama 0.2 detik */
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5); /* Mengubah skala horizontal saat di-hover */
+}
+
+.navbar .navbar-extra a {
+    color: var(--text); /* Warna teks link tambahan */
+    margin: 0 0.5rem; /* Margin kiri kanan 0.5rem */
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary); /* Mengubah warna teks saat link tambahan di-hover */
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%; /* Mengatur ukuran font dasar 75% dari ukuran default */
+    }
+}
+
+/* Mobile */
+@media (max-width: 458px) {
+    html {
+        font-size: 55%; /* Mengatur ukuran font dasar 55% dari ukuran default */
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%; /* Mengatur ukuran font dasar 62.5% dari ukuran default */
+    }
+
+    #hamburger-menu {
+        display: inline-block; /* Menampilkan menu hamburger sebagai blok sebaris */
+    }
+
+    .navbar .navbar-nav {
+        position: absolute; /* Mengatur posisi absolut */
+        top: 100%; /* Menempel tepat di bawah navbar */
+        right: -100%; /* Mengatur posisi di luar layar di sebelah kanan */
+        background-color: var(--accent); /* Warna latar belakang dengan transparansi */
+        width: 30rem; /* Lebar menu 30rem */
+        height: 100vh; /* Tinggi menu 100% tinggi layar */
+        transition: 0.3s; /* Transisi selama 0.3 detik */
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0; /* Memindahkan menu ke dalam layar */
+    }
+
+    .navbar .navbar-nav a {
+        color: #ffffff; /* Menggunakan warna latar belakang untuk teks link */
+        display: block; /* Menampilkan elemen sebagai blok */
+        margin: 1.5rem; /* Margin semua sisi 1.5rem */
+        padding: 0.5rem; /* Padding semua sisi 0.5rem */
+        font-size: 2rem; /* Ukuran font link */
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0; /* Mengatur titik asal transformasi */
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2); /* Mengubah skala horizontal saat di-hover */
+    }
+
+   .faq .row {
+    flex-wrap: wrap;
+  }
+  
+  .faq .row .faq-img img {
+height: 24rem;
+object-fit: cover;
+object-position: center;
+
+  }
+
+  .faq .row .content {
+    padding: 0;
+
+  }
+
+.faq .row .content h3 {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+
+.faq .row .content p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+    .contact .row {
+        flex-wrap: wrap;
+      }
+    
+      .contact .row .map {
+        height: 30rem;
+      }
+    
+      .contact .row form {
+        padding-top: 0;
+      }
+    
+      .modal-content {
+        flex-wrap: wrap;
+      }
+    }
+  
+
+    
+/* Navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+  }
+  
+  .navbar .search-form.active {
+    transform: scaleY(1);
+  }
+  
+  .navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+  }
+  
+  .navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+  }
+  
+  /* Shopping Cart */
+  /* .shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 35rem;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    color: var(--bg);
+    transition: 0.3s;
+  }
+  
+  .shopping-cart.active {
+    right: 0;
+  }
+  
+  .shopping-cart .cart-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #666;
+    position: relative;
+  }
+  
+  .shopping-cart img {
+    height: 6rem;
+    border-radius: 50%;
+  }
+  
+  .shopping-cart h3 {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .shopping-cart .item-price {
+    font-size: 1.2rem;
+  }
+  
+  .shopping-cart .remove-item {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .shopping-cart .remove-item:hover {
+    color: var(--primary);
+  } */
+  
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('..img/bunga7.jpg'); 
+    background-repeat: non-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 25%);
+}
+.hero .content {
+    padding: 1.4rem 7%; 
+    max-width: 60rem;
+    
+}
+
+.hero .content h1 {
+    font-size: 4em;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(228, 224, 227, 0.5);
+line-height: 1.2;
+
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+    text-shadow: 1px 1px 3px rgba(253, 253, 253, 0.5);
+    /* text-shadow: #010101; */
+}
+
+
+.hero .content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 1 px 1 px 3 px rgba(1, 1, 3, 0.5);
+/* mix-blend-mode: difference; */
+}
+
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: var(--maroon);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* ini boxnya ternyata tidak bisa diklik, karena kita ada elemen after di atas di bagian hro after. kita ganti tingginya dari 100 % jadi 40% */
+
+/* Reset some basic styles */
+
+
+/* Slider Section Starts */
+/* .slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-item {
+    position: relative;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.slider-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.slider-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slider-content p {
+    font-size: 16px;
+}
+Slider Section ends */
+
+/* Bunga Sectoion Start */
+section.bunga {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.bunga h2 {
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.bunga h2 span {
+    color: var(--primary);
+}
+
+.bunga h3 {
+font-size: 30px;
+color: #3d1413;
+}
+
+.bunga p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.bunga .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 5rem;
+}
+
+.bunga .box {
+    flex: 1;
+    min-width: 470px;
+    max-width: 470px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(236, 230, 233, 0.1);
+    transition: transform 0.3s ease;
+gap: 2px;
+padding-bottom: 4rem;
+
+}
+
+.bunga .box:hover {
+    transform: translateY(-10px);
+}
+
+.bunga .box img {
+    width: 100%;
+    height: auto;
+}
+
+.bunga .box-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.bunga .box-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bunga .box-content .cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #133d13;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.bunga .box-content .cta:hover {
+    background-color: var(--primary)
+}
+
+
+
+.products h3 {
+  font-size: 30px;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text);
+}
+
+
+
+
+
+/* About Section */
+.about {
+    padding: 10rem 7% 1.4rem;
+}
+
+.about h2 {
+    text-align: center;
+font-size: 2.6rem;
+margin-bottom: 3rem;
+}
+
+.about h2 span, .bunga h2 span {
+    color: var(--primary);
+
+}
+
+section.bunga {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.bunga h2 {
+    font-size: 36px;
+    margin-bottom: 2rem;
+}
+
+.bunga h2 span {
+    color: var(--primary);
+}
+
+.bunga h3 {
+font-size: 30px;
+color: #3d1413;
+}
+
+.bunga p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+.bunga .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 5rem;
+}
+
+.bunga .box {
+    flex: 1;
+    min-width: 470px;
+    max-width: 470px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #ddd;
+    transition: transform 0.3s ease;
+gap: 2px;
+padding-bottom: 4rem;
+
+}
+
+.bunga .box:hover {
+    transform: translateY(-10px);
+}
+
+.bunga .box img {
+    width: 100%;
+    height: auto;
+}
+
+.bunga .box-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.bunga .box-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bunga .box-content .cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #133d13;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.bunga .box-content .cta:hover {
+    background-color: var(--primary)
+}
+
+
+
+
+
+
+/* About Section */
+.about {
+  padding: 10rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about h3 {
+  font-size: 25px;
+  color: #faf7f7;
+  text-align: center;
+}
+
+.about p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+ 
+}
+
+.about .row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 5rem;
+}
+
+.about .box {
+  flex: 1;
+  min-width: 470px;
+  max-width: 470px;
+  background-color: #3d1413;
+  border: 1px solid #0e0606;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(236, 230, 233, 0.1);
+  transition: transform 0.3s ease;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+.about .box-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.about .box-content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.about .box-content h5 {
+  font-size: 17px;
+  color: #f8e0e0;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.about img {
+  flex: 1 1 45rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+
+/* FAQ Section */
+.faq {
+    padding: 10rem 7% 1.4rem;
+
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3rem;
+
+}
+
+.faq h2 span {
+    color: var(--primary);
+
+}
+
+.faq .row {
+display: flex;
+}
+
+.faq .row .about-img {
+flex: 1 1 45rem;  
+margin-top: 3rem;  
+}
+.faq .row .about-img img{
+    width: 100%;
+}
+
+.faq .row .content {
+flex: 1 1 35rem;
+padding: 0 1rem;
+}
+
+.faq h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.faq p {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #f8e0e0;
+
+
+}
+
+
+.faq
+/* Contact Section */
+.contact {
+    padding: 10rem 7% 1.4rem;
+}
+
+.contact h2 {
+    text-align: center;
+font-size: 2.6rem;
+margin-bottom: 3rem;
+}
+
+.contact .row {
+display: flex;
+background-color: var(--maroon);
+flex-wrap: wrap;
+padding: 2rem 2rem;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+ 
+}
+
+.contact .input-group input{
+    flex: 1 1 45rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    grid-row: auto;
+}
+
+.contact .input-group{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    background-color: var(--maroon);
+    border: 1px solid;
+
+}
+
+.contact .btn {
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+font-size: 1.7rem;
+color: #fff;
+background-color: var(--maroon);
+
+}
+
+.contact .btn:hover {
+    background-color: var(--primary);
+}
+.contact p {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 200;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* Products Section */
+.products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  
+  .products .product-card {
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+  }
+  
+  .products .product-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .products .product-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .products .product-icons a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+  
+  .products .product-image {
+    padding: 1rem 0;
+  }
+  
+  .products .product-image img {
+    height: 25rem;
+  }
+  
+  .products .product-content h3 {
+    font-size: 2rem;
+  }
+  
+  .products .product-stars {
+    font-size: 1.7rem;
+    padding: 0.8rem;
+    color: var(--primary);
+  }
+  
+  .products .product-stars .star-full {
+    fill: var(--primary);
+  }
+  
+  .products .product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .products .product-price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+  
+  /* Contact Section */
+  .contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 3rem;
+  }
+  
+  .contact h2 span {
+    color: var(--primary);
+  }
+  .contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+  }
+  
+  .contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .contact .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+  }
+  
+  .contact .row form .input-group input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: #fff;
+  }
+  
+  .contact .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: var(--maroon);
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--maroon);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+  }
+  
+  footer .socials {
+    padding: 1rem 0;
+  }
+  
+  footer .socials a {
+    color: #fff;
+    margin: 1rem;
+  }
+  
+  footer .socials a:hover,
+  footer .links a:hover {
+    color: var(--bg);
+  }
+  
+  footer .links {
+    margin-bottom: 1.4rem;
+  }
+  
+  footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+  }
+  
+  footer .credit {
+    font-size: 0.8rem;
+  }
+  
+  footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+  }
+  
+  /* Modal Box */
+  /* Item Detail */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bg);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animateModal 0.5s;
+  }
+  
+  /* Modal Animation */
+  @keyframes animateModal {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  .modal-container .close-icon {
+    position: absolute;
+    right: 1rem;
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .modal-content img {
+    height: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .modal-content p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 1.2rem;
+  }
+  
+  .modal-content a {
+    display: flex;
+    gap: 1rem;
+    width: 12rem;
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+  }
+  
